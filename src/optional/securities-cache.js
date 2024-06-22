@@ -1,5 +1,5 @@
-import APICache from '../core/cache';
-import Ticker from '../core/ticker';
+import APICache from '../core/cache.js';
+import Ticker from '../core/ticker.js';
 
 const cache = new APICache(10);
 

@@ -1,4 +1,4 @@
-import epochSeconds from '../helpers/time';
+import epochSeconds from '../helpers/time.js';
 
 /**
  * This module will provide a uniform interface for storage

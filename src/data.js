@@ -1,7 +1,7 @@
-import endpoints from './api/endpoints';
-import Ticker from './core/ticker';
-import { configEnabled } from './config';
-import cache from './optional/securities-cache';
+import endpoints from './api/endpoints.js';
+import Ticker from './core/ticker.js';
+import { configEnabled } from './config.js';
+import cache from './optional/securities-cache.js';
 
 class Data {
   /**

@@ -1,5 +1,5 @@
-import endpoints from './api/endpoints';
-import Ticker from './core/ticker';
+import endpoints from './api/endpoints.js';
+import Ticker from './core/ticker.js';
 
 // The maximum number of orders retrieved by the /orders API.
 const ORDERS_PER_PAGE = 20;

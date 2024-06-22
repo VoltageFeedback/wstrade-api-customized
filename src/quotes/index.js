@@ -1,6 +1,6 @@
-import TradeQuotes from './default';
-import Ticker from '../core/ticker';
-import endpoints from '../api/endpoints';
+import TradeQuotes from './default.js';
+import Ticker from '../core/ticker.js';
+import endpoints from '../api/endpoints.js';
 
 class Quotes {
   /**

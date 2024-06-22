@@ -1,14 +1,22 @@
-require('source-map-support').install();
+// require('source-map-support').install();
 
-const Authentication = require('./auth').default;
-const headers = require('./headers').default;
-const Accounts = require('./accounts').default;
-const Orders = require('./orders').default;
-const Data = require('./data').default;
-const Quotes = require('./quotes').default;
-const config = require('./config').default;
+// const Authentication = require('./auth').default;
+// const headers = require('./headers').default;
+// const Accounts = require('./accounts').default;
+// const Orders = require('./orders').default;
+// const Data = require('./data').default;
+// const Quotes = require('./quotes').default;
+// const config = require('./config').default;
+// const HttpsWorker = require('./network/https').default;
 
-const HttpsWorker = require('./network/https').default;
+import Authentication from './auth.js';
+import headers from './headers.js';
+import Accounts from './accounts.js';
+import Orders from './orders.js';
+import Data from './data.js';
+import Quotes from './quotes/index.js';
+import config from './config.js';
+import HttpsWorker from './network/https.js';
 
 /**
  * Builds a new Trade session with an independent authentication
@@ -17,7 +25,7 @@ const HttpsWorker = require('./network/https').default;
  * The headers and config module, however, is mutually shared between
  * all sessions.
  */
-const Session = () => {
+function Session() {
   const worker = new HttpsWorker();
   const data = new Data(worker);
 
@@ -38,4 +46,5 @@ const defaultSession = new Session();
 // Allow the creation of multiple sessions through a Session() constructor
 defaultSession.Session = () => new Session();
 
-module.exports = defaultSession;
+// module.exports = defaultSession;
+export default Session;

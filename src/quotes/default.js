@@ -2,15 +2,16 @@
  * The default provider for quotes is Wealthsimple Trade.
  */
 
-export default (data) => ({
-
-  /**
+export default function TradeQuotes(data) {
+  return ({
+    /**
      * Quote for a ticker from the Wealthsimple Trade endpoint.
      *
      * Remember that this quote is NOT real-time!
-     */
-  async quote(ticker) {
-    const info = await data.getSecurity(ticker, true);
-    return info.quote.amount;
-  },
-});
+    */
+    async quote(ticker) {
+      const info = await data.getSecurity(ticker, true);
+      return info.quote.amount;
+    },
+  })
+};

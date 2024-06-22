@@ -1,8 +1,8 @@
 import cloudscraper from 'cloudscraper';
-import customHeaders from '../headers';
-import endpoints from '../api/endpoints';
-import { configEnabled } from '../config';
-import Tokens from '../core/tokens';
+import customHeaders from '../headers.js';
+import endpoints from '../api/endpoints.js';
+import { configEnabled } from '../config.js';
+import Tokens from '../core/tokens.js';
 
 const [HTTP_OK, HTTP_CREATED] = [200, 201];
 

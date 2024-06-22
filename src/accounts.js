@@ -1,4 +1,4 @@
-import endpoints from './api/endpoints';
+import endpoints from './api/endpoints.js';
 
 // The maximumum number of activities we can pull in one go.
 const ACTIVITIES_MAX_DRAW = 99;
